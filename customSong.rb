@@ -1,7 +1,7 @@
-
-use_bpm 130
+use_bpm 132
 
 lax5 = ""
+
 
 define :atw_music do |a|
   play :e5, amp: a
@@ -42,7 +42,7 @@ end
 #"define :atw_bass do" We'll define bass and cymbals next class
 
 live_loop :background_music1 do
-  10.times do
+  14.times do
     atw_music 0.6
   end
   stop
@@ -64,22 +64,20 @@ sample :drum_splash_soft, amp: 2
 sleep 16
 
 live_loop :cymbal2 do
-  sleep 0.5
-  sample :drum_cymbal_closed, amp: 0.4
-  sleep 0.5
+  16.times do
+    sleep 0.5
+    sample :drum_cymbal_closed, amp: 0.4
+    sleep 0.5
+  end
+  stop
 end
 
 sleep 16
 
 
-sample :drum_splash_soft, amp: 2
+sample :drum_splash_soft, amp: 1
 
 live_loop :background_music2 do
-  use_synth :beep
-  atw_music 0.4
-end
-
-live_loop :background_music3 do
   use_synth :hoover
   atw_music 0.4
 end
@@ -91,3 +89,12 @@ live_loop :cymbal1 do
   sample :drum_cymbal_closed, amp: 0.4
   sleep 0.34
 end
+
+sleep 32
+
+live_loop :background_music3 do
+  use_synth :supersaw
+  atw_music 0.4
+end
+
+sample :drum_splash_soft, amp: 1
