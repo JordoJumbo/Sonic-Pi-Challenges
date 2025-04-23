@@ -1,7 +1,7 @@
 # Around The World - Daft Punk
 use_bpm 121.3
 
-atwIntro = "C:/Users/Jordan_Dominguez/Documents/Audacity/ATC - Around The world studio quality acapella.wav"
+atwDaft = "C:/Users/Jordan_Dominguez/Documents/Audacity/Around The World - Isolated Vocals  Bass  Sound Effects  Drums.wav"
 
 noteList = [:d4,:e4,:c5,:a4,:g4,:g4,:a4,:b4,:e4,:e4,:e5,:d5,:b4,:a4,:g4,:g4,:a4,:e4]
 sleepList = [0.25,0.75,1,0.5,1,0.5,0.25,3.75,0.25,0.25,0.5,0.5,0.5,0.5,1,0.5,0.25,0.25]
@@ -73,7 +73,7 @@ define :atw_bass2 do
     sleep 0.25
     play :c3, amp: 0.85
     sleep 0.25
-   
+    
     play :c3, amp: 0.85
     sleep 1
     play :c3, amp: 0.85
@@ -86,7 +86,7 @@ define :atw_bass2 do
     sleep 0.25
     play :e3, amp: 0.85
     sleep 0.25
-   
+    
     play :e3, amp: 0.85
     sleep 1
     play :e3, amp: 0.85
@@ -95,7 +95,7 @@ define :atw_bass2 do
     sleep 1
     play :e3, amp: 0.85
     sleep 1
-   
+    
     play :f3, beat_stretch: 0.3, amp: 0.85
     sleep 0.5
     play :e3, beat_stretch: 0.3, amp: 0.85
@@ -112,7 +112,7 @@ define :atw_bass2 do
     sleep 0.5
     play :a2, amp: 0.85
     sleep 0.5
-   
+    
   end
 end
 
@@ -189,11 +189,11 @@ live_loop :main_bass do
   stop
 end
 
-sleep 64
+sleep 65.45
 
 live_loop :atw_voice do
-  16.times do
-    atwIntro
+  8.times do
+    sample atwDaft
     sleep 8
   end
   stop
